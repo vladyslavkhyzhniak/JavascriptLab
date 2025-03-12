@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="slider-container">
+        <div class="slider" id="slider">
+
+            <div class="slide">
+                <img src="https://picsum.photos/400/400" alt="Slide 1">
+            </div>
+            <div class="slide">
+                <img src="https://picsum.photos/400/400" alt="Slide 2">
+            </div>
+            <div class="slide">
+                <img src="https://picsum.photos/400/400" alt="Slide 3">
+            </div>
+        </div>
+
+
+        <div class="nav-buttons">
+            <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+            <button class="next" onclick="moveSlide(1)">&#10095;</button>
+        </div>
+
+        <div class="dots">
+            <span class="dot" onclick="goToSlide(0)"></span>
+            <span class="dot" onclick="goToSlide(1)"></span>
+            <span class="dot" onclick="goToSlide(2)"></span>
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+
+</html>
