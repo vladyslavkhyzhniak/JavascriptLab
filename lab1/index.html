@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="input">
+        <input type="number" class="input-field" placeholder="0">
+        <input type="number" class="input-field" placeholder="0">
+        <input type="number" class="input-field" placeholder="0">
+    </div>
+    <button id="RemoveBtn">Usuń pole</button>
+    <button id="addBtn">Dodaj pole</button>
+    <div id="result"></div>
+</body>
+<script>
+    const inputDiv = document.getElementById("input");
+    const addBtn = document.getElementById("addBtn");
+    const result = document.getElementById("result");
+
+    function updateResults() {
+        const values = []
+        document.querySelectorAll(".input-field")
+            .forEach(element => {
+                values.push(+element.value);
+            });
+        let sum = 0;
+        values.forEach(element => {
+            sum = sum + element;
+        });
+        const average = sum / values.length;
+        const min = Math.min(...values);
+        const max = Math.max(...values);
+        result.textContent = `Suma: ${sum} Średnia: ${average} Min: ${min} Max: ${max}`;
+    }
+
+    function addInputField() {
+        const inputField = document.createElement("input");
+        inputField.type = "number";
+        inputField.placeholder = "0";
+        inputField.classList.add("input-field");
+        inputDiv.appendChild(inputField);
+        UpdateData();
+    }
+
+    function removeInputField() {
+        lastInput = inputDiv.lastElementChild;
+
+        if (lastInput.value == 0) {
+            lastInput.remove();;
+        } else {
+            alert("Nie można usunąć pola z wartością");
+        }
+    }
+
+    function UpdateData() {
+        document.querySelectorAll(".input-field").forEach(element => {
+            element.addEventListener("input", updateResults);
+        });
+        updateResults();
+    }
+
+    UpdateData();
+    document.getElementById("addBtn").addEventListener("click", addInputField);
+    document.getElementById("RemoveBtn").addEventListener("click", removeInputField);
+</script>
+
+</html>
