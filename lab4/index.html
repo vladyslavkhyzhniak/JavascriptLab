@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="note-form">
+            <input type="text" id="title" placeholder="Tytuł notatki">
+            <textarea id="content" placeholder="Treść notatki"></textarea>
+            <input type="color" id="color" value="#ffffff">
+            <label>
+                <input type="checkbox" id="pin"> Przypnij do góry
+            </label>
+            <button id="saveNote">Zapisz notatkę</button>
+        </div>
+
+        <div id="notesList" class="notes-list"></div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
