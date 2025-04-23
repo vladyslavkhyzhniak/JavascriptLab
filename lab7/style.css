@@ -1,0 +1,28 @@
+.container {
+    background-color: #f0f0f0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    position: relative;
+}
+
+.circle {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.black {
+    background-color: black;
+    left: 200px;
+    top: 300px;
+}
+
+.blue {
+    background-color: blue;
+    left: 100px;
+    top: 100px;
+}
