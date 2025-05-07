@@ -1,0 +1,63 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #e0f7fa;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 600px;
+    margin: auto;
+}
+
+h1 {
+    text-align: center;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+#city-input {
+    padding: 10px;
+    font-size: 16px;
+}
+
+button {
+    padding: 10px 15px;
+    background-color: #00796b;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+#weather-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.weather-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #687a96;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.weather-card img {
+    width: 50px;
+}
+
+.remove-btn {
+    background-color: crimson;
+    color: white;
+    border: none;
+    padding: 5px 8px;
+    cursor: pointer;
+}
