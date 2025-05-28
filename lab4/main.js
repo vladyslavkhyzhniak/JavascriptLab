@@ -3,7 +3,7 @@ renderNotes();
 
 function getNotes() {
     const notes = localStorage.getItem('notes');
-    return JSON.parse(notes);
+    return notes ? JSON.parse(notes) : [];
 }
 
 function renderNotes() {
